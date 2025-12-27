@@ -4,11 +4,11 @@ package tasks;
 public class SafePublication {
     private volatile Holder holder;
 
-    public void init() {
+    public synchronized void init() {
         holder = new Holder(1,2);
     }
 
-    public Holder getHolder() {
+    public synchronized Holder getHolder() {
         return holder;
     }
 
