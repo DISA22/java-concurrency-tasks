@@ -6,7 +6,7 @@ public class DeadlockExample {
     private final Object lockB = new Object();
 
     public void methodA() {
-        synchronized (lockB) {
+        synchronized (lockA) {
             System.out.println("Захватил lockB");
         }
 
@@ -16,15 +16,10 @@ public class DeadlockExample {
             throw new RuntimeException(e);
         }
 
-        synchronized (lockA) {
+        synchronized (lockB) {
             System.out.println("Захватил ЛокA");
         }
     }
-
-    //я пробовал сделать дедлок и у меня ни разу не получилось
-    //я пробовал сделать дедлок и у меня ни разу не получилось
-    //я пробовал сделать дедлок и у меня ни разу не получилось
-
 
     public void methodB() {
         synchronized (lockA) {
