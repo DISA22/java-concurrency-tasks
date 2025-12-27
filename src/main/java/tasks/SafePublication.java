@@ -2,7 +2,7 @@
 package tasks;
 
 public class SafePublication {
-    private Holder holder;
+    private volatile Holder holder;
 
     public void init() {
         holder = new Holder(1,2);
