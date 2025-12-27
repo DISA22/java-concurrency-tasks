@@ -10,12 +10,6 @@ public class DeadlockExample {
             System.out.println("Захватил lockB");
         }
 
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
         synchronized (lockB) {
             System.out.println("Захватил ЛокA");
         }
@@ -24,12 +18,6 @@ public class DeadlockExample {
     public void methodB() {
         synchronized (lockA) {
             System.out.println("Захватил lockA");
-        }
-
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
 
         synchronized (lockB) {

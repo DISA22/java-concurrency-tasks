@@ -7,7 +7,7 @@ public class VisibilityProblem {
         value = v;
     }
 
-    public int get() {
+    public synchronized int get() {
         return value;
     }
 }

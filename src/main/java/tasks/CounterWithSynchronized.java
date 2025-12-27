@@ -7,7 +7,7 @@ public class CounterWithSynchronized {
         value++;
     }
 
-    public int get() {
+    public synchronized int get() {
         return value;
     }
 }
