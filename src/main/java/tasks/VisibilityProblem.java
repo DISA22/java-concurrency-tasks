@@ -1,11 +1,10 @@
-
 package tasks;
 
 public class VisibilityProblem {
     private int value = 0;
 
     public void set(int v) {
-        // TODO
+        value = v;
     }
 
     public int get() {

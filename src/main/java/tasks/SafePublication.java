@@ -5,7 +5,7 @@ public class SafePublication {
     private Holder holder;
 
     public void init() {
-        // TODO
+        holder = new Holder(1,2);
     }
 
     public Holder getHolder() {
